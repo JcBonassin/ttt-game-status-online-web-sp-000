@@ -31,3 +31,10 @@ def won?(board)
    end
    false
  end
+
+ def full? (board)
+   board.all? {|index| index == "x" || index == "O"}
+ end
+ 
+   
+   
