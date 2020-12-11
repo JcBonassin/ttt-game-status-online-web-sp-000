@@ -36,5 +36,3 @@ def won?(board)
    board.all? {|index| index == "x" || index == "O"}
  end
  
-   
-   
