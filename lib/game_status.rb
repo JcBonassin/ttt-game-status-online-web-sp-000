@@ -38,37 +38,37 @@ if (board.select{|i| i == "X" || i == "O"}).length < 9
 else
   return true
 end
-end 
+end
 
 
 def draw?(board)
-if full?(board) == true && won?(board) == false 
-  return true 
+if full?(board) == true && won?(board) == false
+  return true
 else
   return false
 end
 end
 
 def over?(board)
-if full?(board) == true 
+if full?(board) == true
   return true
 elsif won?(board)
-  return true 
+  return true
 elsif draw?(board)
-  return true 
-else 
+  return true
+else
   return false
-end 
 end
-    
+end
+
 def winner(board)
 winner = won?(board)
-if winner != false 
+if winner != false
   if board[winner[0]] == "O"
     # puts "Congratulations O, you won!"
     return "O"
   elsif board[winner[0]] == "X"
-    # puts "Congratulations X, you won!" 
+    # puts "Congratulations X, you won!"
     return "X"
   end
 end
