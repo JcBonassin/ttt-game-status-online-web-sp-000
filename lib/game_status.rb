@@ -51,3 +51,16 @@ def over? (board)
     return false
   end
 end
+
+def winner?(board)
+  index = won?(board)
+  if index == false
+    Puts "you loose"
+  else
+    if board[index[0]] == "x"
+      return "x"
+    else
+      return "0"
+    end
+  end
+end
