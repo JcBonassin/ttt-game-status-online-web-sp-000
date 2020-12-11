@@ -56,10 +56,10 @@ def winner(board)
 winner = won?(board)
 if winner != false
   if board[winner[0]] == "O"
-    puts "Congratulations O, you won!"
+    #puts "Hey O, you won!"
     return "O"
   elsif board[winner[0]] == "X"
-    puts "Congratulations X, you won!"
+    #puts "Congratulations X, you won!"
     return "X"
   end
 end
