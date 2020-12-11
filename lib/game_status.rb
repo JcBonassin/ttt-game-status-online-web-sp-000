@@ -32,34 +32,43 @@ def won?(board)
    false
  end
 
- def full? (board)
-   board.all? {|index| index == "x" || index == "O"}
- end
+ def full?(board)
+if (board.select{|i| i == "X" || i == "O"}).length < 9
+  return false
+else
+  return true
+end
+end 
+
 
 def draw?(board)
-  if full?(board) == true && won?(board) == false
-    return true
-  else
-    return false
-  end
+if full?(board) == true && won?(board) == false 
+  return true 
+else
+  return false
+end
 end
 
-def over? (board)
-  if won?(board) || draw?(board) || full(board)
-    return true
-  else
-    return false
-  end
+def over?(board)
+if full?(board) == true 
+  return true
+elsif won?(board)
+  return true 
+elsif draw?(board)
+  return true 
+else 
+  return false
+end 
 end
-
+    
 def winner(board)
 winner = won?(board)
-if winner != false
+if winner != false 
   if board[winner[0]] == "O"
-    #puts "Hey O, you won!"
+    # puts "Congratulations O, you won!"
     return "O"
   elsif board[winner[0]] == "X"
-    #puts "Congratulations X, you won!"
+    # puts "Congratulations X, you won!" 
     return "X"
   end
 end
